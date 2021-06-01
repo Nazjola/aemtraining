@@ -1,0 +1,35 @@
+
+<H1>
+Ciao Jonida :${currentPage.path}
+</H1>
+<ol data-sly-list.item = "${currentPage.listChildren}">
+<li>${item.count}:${item.title}</li>
+
+
+
+<p data-sly-test="${properties.text}"> titolo esiste ${properties.text} </p>
+<p data-sly-test="${properties.text == 'testonaziola'}"> titolo non e jonida pero e :${properties.text} </p>
+
+
+<ul>
+<li data-sly-repeat="${currentPage.listChildren}">${item.title}</li>
+</ul>
+${properties.text == 'testonaziola' ? properties.text : 'titolo non e jonida'}  
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+<sly data-sly-call="${clientlib.css @ categories='aemtraning.jonidahello'}"/>
+    <sly data-sly-call="${clientlib.js @ categories='aemtraning.jonidahello'}"/>
+</sly>
+
+<div class="cmp-jonidahello" data-cmp-is="jonidahello">
+Testo Editato : ${properties.text}
+    <sly data-sly-use.model="com.moveo.aem.training.core.models.HelloJonidaModel" >
+        <div>
+            ${model.title}
+            ${model.verifficaTesto}
+        </div>
+
+
+    </sly>
+
+</div>
