@@ -1,0 +1,12 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+ <sly data-sly-call="${clientlib.all @ categories='aemtraining.helloworldola'}"/>
+</sly>
+
+<div class="cmp-helloworldola">
+ Testo Editato: ${properties.text}
+</div>
+<sly  data-sly-use.model="com.moveo.aem.training.core.models.HelloWorldOlaModel">
+ <div>  ${model.title}   </div>
+ <div> ${model.verifiedText}  </div>
+
+</sly>
