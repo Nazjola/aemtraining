@@ -50,14 +50,9 @@ public class NewTestModel {
     private ResourceResolver resourceResolver;
 
     private String message;
+
     @ValueMapValue
-    private String name;
-    @ValueMapValue
-    private String surname;
-    @ValueMapValue
-    private Image image;
-    @ValueMapValue
-    private Image image2;
+    private String file;
 
     @PostConstruct
     protected void init() {
@@ -73,26 +68,18 @@ public class NewTestModel {
 //                + "This is instance: " + settings.getSlingId() + "\n";
     }
 
-    public Image  getVerifiedName() {
-  
-        final Image componentImage = getImage1();
-        final Image componentImage2 = getImage2();
 
 
-        if ( name == "ola") {
 
-            return componentImage2;
-        }else {
-              return componentImage ;
+    public String  getVerifiedImage() {
+            if ( file ==  null || "".equals(file) ){
+                file = "/content/dam/aemtraining/pic1.jpg" ;
+                return file ;
+            }
+            return  file ;
         }
 
     }
 
 
-    private Image getImage1() {
-        return image;
-    }
-    private Image getImage2() {
-        return image2;
-    }
-}
+
