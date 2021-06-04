@@ -1,0 +1,25 @@
+<div class="cmp-newtest" data-cmp-is="newtest">
+    <!--<div> NAME : ${properties.name} </div>
+    <div> SURNAME: ${properties.surname} </div>
+
+     <sly data-sly-use.model="com.moveo.aem.training.core.models.NewTestModel" >
+            <div>
+
+                ${model.verifiedName}
+            </div>
+
+        </sly>
+    </div>-->
+
+
+    <div> Title : ${properties.name} </div>
+    <div> Description: ${properties.surname} </div>
+    <p data-sly-test="${!properties.image}">
+        <img src="/content/dam/aemtraining/pic1.jpg" alt="jonidadefault" width="500" height="600">
+    </p>
+    <p data-sly-test="${properties.image}">
+        <img src="${properties.image}" alt="${properties.altimg}" width="500" height="600">
+    </p>
+
+
+</div>

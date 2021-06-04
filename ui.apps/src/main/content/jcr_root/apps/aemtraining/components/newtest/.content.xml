@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Component"
-<<<<<<< HEAD
-    jcr:title="Itext Component"
-=======
-    jcr:title="iText Component"
->>>>>>> 7ef442c8b0410272ce1c68bd2602e382c6d5c134
+    jcr:title="New Test Component"
     componentGroup="Aem Training - Content"/>
