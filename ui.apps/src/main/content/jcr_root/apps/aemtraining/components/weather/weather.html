@@ -1,9 +1,27 @@
-
-${properties.title}
-${properties.latitude}
-${properties.longitude}
-
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
-<sly data-sly-call="${clientlib.css @ categories='aemtraning.jonidahello'}"/>
-    <sly data-sly-call="${clientlib.js @ categories='aemtraning.jonidahello'}"/>
+    <sly data-sly-call="${clientlib.all @ categories='aemtraining.weather'}"/>
 </sly>
+
+<sly data-sly-test.checkData="${wcmmode.edit && !properties.latitude && !properties.longitude}">
+    <div data-emptytext="Enter longitude and latitude" class="cq-placeholder"></div>
+</sly>
+
+<div data-sly-test ="${!checkData}" class="row">
+    <div class="col-7">
+       <H2>${properties.title}</H2>
+        ${properties.latitude}
+        ${properties.longitude}
+
+        <div class="weather-container">
+            <div>  <span class="titolo-giorno">Lunedi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">25&deg; </span> <span class="temp-min">15&deg;</span></div>
+            <div> <span class="titolo-giorno">Martedi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">21&deg; </span> <span class="temp-min">13&deg;</span></div>
+            <div> <span class="titolo-giorno">Mercoledi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">22&deg; </span> <span class="temp-min">11&deg;</span></div>
+            <div> <span class="titolo-giorno">Giovedi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">23&deg; </span> <span class="temp-min">12&deg;</span></div>
+            <div><span class="titolo-giorno">Venerdi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">25&deg; </span> <span class="temp-min">15&deg;</span></div>
+            <div> <span class="titolo-giorno">Sabato</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">24&deg; </span> <span class="temp-min">11&deg;</span></div>
+            <div> <span class="titolo-giorno">Domenica</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">25&deg; </span> <span class="temp-min">10&deg;</span></div>
+        </div>
+    </div>
+</div>
+
+
