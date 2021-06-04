@@ -48,14 +48,14 @@ public class ItextModel {
 
     @ValueMapValue
 
-    private Object image;
+    private String file;
 
     public String getVerifficaFoto() {
 
-        if (!(image).equals("albero") ) {
-            return "imagine non e jonida";
+        if (file == null || "".equals(file)) {
+            return file="/content/dam/aemtraining/download.jpg";
         }
-        return (String) image;
+        return file;
 
     }
 }
