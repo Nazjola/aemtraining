@@ -1,17 +1,25 @@
 
 .weather-container {
-  display: flex; /* or inline-flex */
+    display: flex; /* or inline-flex */
 }
 .titolo-giorno{
-font-weight: 300;
-    color: black;
-    border: 2px solid black;
+
+    color: #202124;
+    border: 1px solid black;
+    font-family: arial,sans-serif;
+    font-size: medium;
+    font-weight: normal;
+
 }
 .temp-min {
-   font-style: italic;
-   font-color: red;
+    font-style: italic;
+    font-color: red;
+
 }
 .temp-max {
-     font-style: initial;
-     font-weight: bold;
+    font-style: initial;
+    font-weight: bold;
+
 }
+
+
