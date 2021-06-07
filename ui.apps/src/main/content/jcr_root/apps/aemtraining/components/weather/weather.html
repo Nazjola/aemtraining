@@ -9,16 +9,17 @@
 <div data-sly-test ="${!checkData}" class="row">
     <div>
        <H2>${properties.title}</H2>
-        ${properties.latitude}
-        ${properties.longitude}
+<!--        ${properties.latitude}-->
+<!--        ${properties.longitude}-->
+        <sly data-sly-use.model="com.moveo.aem.training.core.models.WeatherModel"></sly>
 
         <div class="weather-container">
-            <div>  <span class="titolo-giorno">Lunedi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">25&deg; </span> <span class="temp-min">15&deg;</span></div>
-            <div> <span class="titolo-giorno">Martedi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">21&deg; </span> <span class="temp-min">13&deg;</span></div>
-            <div> <span class="titolo-giorno">Mercoledi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">22&deg; </span> <span class="temp-min">11&deg;</span></div>
-            <div> <span class="titolo-giorno">Giovedi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">23&deg; </span> <span class="temp-min">12&deg;</span></div>
-            <div><span class="titolo-giorno">Venerdi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">25&deg; </span> <span class="temp-min">15&deg;</span></div>
-            <div> <span class="titolo-giorno">Sabato</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">24&deg; </span> <span class="temp-min">11&deg;</span></div>
+            <div>  <span class="titolo-giorno">Lunedi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>   <span class="temp-max">25&deg; </span> <span class="temp-min">15&deg;</span></div>
+            <div> <span class="titolo-giorno">Martedi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>   <span class="temp-max">21&deg; </span> <span class="temp-min">13&deg;</span></div>
+            <div> <span class="titolo-giorno">Mercoledi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/> <span class="temp-max">22&deg; </span> <span class="temp-min">11&deg;</span></div>
+            <div> <span class="titolo-giorno">Giovedi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>   <span class="temp-max">23&deg; </span> <span class="temp-min">12&deg;</span></div>
+            <div><span class="titolo-giorno">Venerdi</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>    <span class="temp-max">25&deg; </span> <span class="temp-min">15&deg;</span></div>
+            <div> <span class="titolo-giorno">Sabato</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>    <span class="temp-max">24&deg; </span> <span class="temp-min">11&deg;</span></div>
             <div> <span class="titolo-giorno">Domenica</span> <img src="http://openweathermap.org/img/wn/10d@2x.png"/>  <span class="temp-max">25&deg; </span> <span class="temp-min">10&deg;</span></div>
         </div>
     </div>
