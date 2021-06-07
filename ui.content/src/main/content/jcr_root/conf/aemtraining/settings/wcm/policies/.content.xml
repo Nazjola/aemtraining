@@ -304,6 +304,17 @@
                         </assetToComponentMapping>
                     </cq:authoring>
                 </policy_1575040440977>
+                <policy_1623060507353
+                        jcr:description="weather policy"
+                        jcr:lastModified="{Date}2021-06-07T12:10:26.440+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="weatherpolicy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/aemtraining/components/text,/apps/aemtraining/components/title,/apps/aemtraining/components/weather]"
+                        layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1623060507353>
             </container>
             <teaser jcr:primaryType="nt:unstructured">
                 <policy_1575031387650
