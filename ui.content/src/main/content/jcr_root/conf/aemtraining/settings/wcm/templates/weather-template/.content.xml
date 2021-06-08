@@ -7,6 +7,6 @@
         cq:templateType="/conf/aemtraining/settings/wcm/template-types/page"
         jcr:description="My Site Page Template"
         jcr:primaryType="cq:PageContent"
-        jcr:title="One Column"
+        jcr:title="Weather Template"
         status="enabled"/>
 </jcr:root>

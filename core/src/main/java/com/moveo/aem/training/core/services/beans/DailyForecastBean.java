@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class DailyForecastBean {
 
-    private String lat;
-    private String lon;
+/*    private String lat;
+    private String lon;*/
     private String maxTemp;
     private String minTemp;
     private String icon;
-    private String giorno;
+    private String day;
     private Date data;
 
-    public String getLat() {
+/*    public String getLat() {
         return lat;
     }
 
@@ -26,7 +26,7 @@ public class DailyForecastBean {
 
     public void setLon(String lon) {
         this.lon = lon;
-    }
+    }*/
 
     public String getMaxTemp() {
         return maxTemp;
@@ -52,12 +52,12 @@ public class DailyForecastBean {
         this.icon = icon;
     }
 
-    public String getGiorno() {
-        return giorno;
+    public String getDay() {
+        return day;
     }
 
-    public void setGiorno(String giorno) {
-        this.giorno = giorno;
+    public void setDay(String day) {
+        this.day = day;
     }
 
     public Date getData() {
