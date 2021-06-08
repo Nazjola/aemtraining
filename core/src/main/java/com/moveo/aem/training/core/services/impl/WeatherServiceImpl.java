@@ -14,6 +14,7 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.metatype.annotations.Designate;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -48,8 +49,10 @@ public List<DailyForecastBean> getDailyForecast(String latitude, String longitud
            forecastBean.setMinTemp(dailyForecast.getTemp().getMin().toString());
            forecastBean.setMaxTemp(dailyForecast.getTemp().getMax().toString());
            forecastBean.setIcon(dailyForecast.getWeather().get(0).getIcon());
-           forecastBean.setDay(dailyForecast.getTemp().getDay().toString());
-       /*  forecastBean.setData(Daily.getDt());*/
+           Date time=new Date( Long.parseLong(dailyForecast.getDt().toString())*1000);
+           String dayWeekText = new SimpleDateFormat("EEEE").format(time);
+           forecastBean.setDay(dayWeekText);
+           forecastBean.setData(time);
            dailyForecastBeanList.add(forecastBean);
        }
         return dailyForecastBeanList;
