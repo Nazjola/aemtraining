@@ -4,3 +4,4 @@ browser.min.js
 jquery.min.js
 main.js
 util.js
+handlebars.js

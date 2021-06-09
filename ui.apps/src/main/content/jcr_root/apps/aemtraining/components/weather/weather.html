@@ -9,16 +9,19 @@
         <H2>${properties.title}</H2>
         <!--        ${properties.latitude}-->
         <!--        ${properties.longitude}-->
-        <sly data-sly-use.model="com.moveo.aem.training.core.models.WeatherModel"></sly>
-        <div class="weather-container" data-sly-list.weather="${model.weatherList}">
-            <div class="element-style">
-                <span class="titolo-giorno">${weather.day}</span>
-                <img src="http://openweathermap.org/img/wn/${weather.icon}@2x.png"/>
-                <div>
-                    <span class="temp-max">${weather.maxTemp}&deg; </span> /
-                    <span class="temp-min">${weather.minTemp}&deg;</span>
-                </div>
-            </div>
-        </div>
+
+        <div class="weather-container"></div>
     </div>
 </div>
+<script id="weather-template" type="text/x-handlebars-template">
+    {{#each weatherList}}
+     <div class="element-style">
+        <span class="titolo-giorno">{{day}}</span>
+        <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png"/>
+        <div>
+            <span class="temp-max">{{maxTemp}}&deg; </span> /
+            <span class="temp-min">{{minTemp}}&deg;</span>
+        </div>
+     </div>
+    {{/each}}
+</script>
