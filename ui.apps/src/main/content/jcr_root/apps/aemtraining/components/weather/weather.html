@@ -1,27 +1,24 @@
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
     <sly data-sly-call="${clientlib.all @ categories='aemtraining.weather'}"/>
 </sly>
-
 <sly data-sly-test.checkData="${wcmmode.edit && !properties.latitude && !properties.longitude}">
     <div data-emptytext="Enter longitude and latitude" class="cq-placeholder"></div>
 </sly>
-
 <div data-sly-test ="${!checkData}" class="row">
     <div>
-       <H2>${properties.title}</H2>
-<!--        ${properties.latitude}-->
-<!--        ${properties.longitude}-->
+        <H2>${properties.title}</H2>
+        <!--        ${properties.latitude}-->
+        <!--        ${properties.longitude}-->
         <sly data-sly-use.model="com.moveo.aem.training.core.models.WeatherModel"></sly>
-
         <div class="weather-container" data-sly-list.weather="${model.weatherList}">
-            <div>
+            <div class="element-style">
                 <span class="titolo-giorno">${weather.day}</span>
                 <img src="http://openweathermap.org/img/wn/${weather.icon}@2x.png"/>
-                <span class="temp-max">${weather.maxTemp}&deg; </span>
-                <span class="temp-min">${weather.minTemp}&deg;</span>
+                <div>
+                    <span class="temp-max">${weather.maxTemp}&deg; </span> /
+                    <span class="temp-min">${weather.minTemp}&deg;</span>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-
