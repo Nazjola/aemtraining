@@ -3,7 +3,7 @@ $( document ).ready(function() {
 
     $.ajax({
         type: "GET",
-             url "/content/aemtraining/us/en/coinmarket/jcr:content/root/container/coinmarket.json",
+        url: "/content/aemtraining/us/en/coinmarket/jcr:content/root/container/coinmarket.json",
         dataType: "json",
         success: function (result, status, xhr) {
             // var table = $("<table><tr><th>Weather Description</th></tr>");

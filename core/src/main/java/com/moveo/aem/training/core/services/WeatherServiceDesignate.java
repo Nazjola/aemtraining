@@ -1,7 +1,8 @@
 package com.moveo.aem.training.core.services;
 
-
+import com.moveo.aem.training.core.schedulers.SimpleScheduledTask;
 import org.osgi.service.metatype.annotations.AttributeDefinition;
+import org.osgi.service.metatype.annotations.Designate;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
 

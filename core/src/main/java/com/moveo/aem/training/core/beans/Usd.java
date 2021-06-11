@@ -45,11 +45,7 @@ public class Usd implements Serializable
     private String lastUpdated;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-<<<<<<< HEAD
-    private final static long serialVersionUID = 320635525793394760L;
-=======
     private final static long serialVersionUID = -4529931081636836160L;
->>>>>>> aee500f36079cb89f1b54b02a77861f49894cac4
 
     @JsonProperty("price")
     public Double getPrice() {

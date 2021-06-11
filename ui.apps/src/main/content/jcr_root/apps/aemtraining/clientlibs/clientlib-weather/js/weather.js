@@ -1,12 +1,8 @@
 $( document ).ready(function() {
     console.log( "document loaded" );
-
     $.ajax({
         type: "GET",
-             url : location.pathname,
-             url : url.substring(0, url.lastIndexOf(".")),
-             url : url + "/jcr:content/root/container/weather.json",
-/*        url: "/content/aemtraining/us/en/tirana/jcr:content/root/container/weather.json",*/
+        url: "/content/aemtraining/us/en/tirana/jcr:content/root/container/weather.json",
         dataType: "json",
         success: function (result, status, xhr) {
             // var table = $("<table><tr><th>Weather Description</th></tr>");
@@ -19,7 +15,6 @@ $( document ).ready(function() {
             //
             // $("#weather-container").html(table);
             console.log(result);
-            console.log(url);
             var source = $("#weather-template").html();
             var template = Handlebars.compile(source);
             var html = template(result);
