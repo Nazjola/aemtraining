@@ -14,26 +14,39 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "USD"
+    "status",
+    "data"
 })
 @Generated("jsonschema2pojo")
-public class Quote implements Serializable
+public class CoinmarketBean implements Serializable
 {
 
-    @JsonProperty("USD")
-    private Usd usd;
+    @JsonProperty("status")
+    private Status status;
+    @JsonProperty("data")
+    private Data data;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-    private final static long serialVersionUID = 5139213066973260163L;
+    private final static long serialVersionUID = 8419355944185273461L;
 
-    @JsonProperty("USD")
-    public Usd getUsd() {
-        return usd;
+    @JsonProperty("status")
+    public Status getStatus() {
+        return status;
     }
 
-    @JsonProperty("USD")
-    public void setUsd(Usd usd) {
-        this.usd = usd;
+    @JsonProperty("status")
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    @JsonProperty("data")
+    public Data getData() {
+        return data;
+    }
+
+    @JsonProperty("data")
+    public void setData(Data data) {
+        this.data = data;
     }
 
     @JsonAnyGetter

@@ -8,6 +8,9 @@ import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javax.annotation.PostConstruct;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 
 @Model(adaptables = Resource.class)
@@ -22,9 +25,18 @@ public class CoinMarketModel {
     @PostConstruct
     protected void init() {
         LOG.debug("Coin Market Model");
+
+        try {
+            coinMarketList = coinMarketService.getCryptocurrencyPrices();
+        }
+        catch(IOException | URISyntaxException exception){
+            LOG.error("WeatherModel latitude/longitude non inseriti");
+            coinMarketList = new ArrayList<>();
+        }
     }
 
     public List<CoinMarketBean> getCoinMarketList() {
-        return coinMarketList;
+        return
+                coinMarketList;
     }
 }

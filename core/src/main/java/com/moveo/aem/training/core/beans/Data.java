@@ -27,11 +27,7 @@ public class Data implements Serializable
     private Eth eth;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-<<<<<<< HEAD
-    private final static long serialVersionUID = 3747846169768450987L;
-=======
     private final static long serialVersionUID = 6993405307007349571L;
->>>>>>> aee500f36079cb89f1b54b02a77861f49894cac4
 
     @JsonProperty("BTC")
     public Btc getBtc() {

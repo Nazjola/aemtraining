@@ -53,11 +53,11 @@ public class HttpClient {
             request.setHeader(HttpHeaders.ACCEPT, "application/json");
             request.addHeader("X-CMC_PRO_API_KEY", apiKey);
 
-            CloseableHttpResponse response = httpClient.execute(request);
+            CloseableHttpResponse responsecoin = httpClient.execute(request);
 
             try {
 
-                HttpEntity entity = response.getEntity();
+                HttpEntity entity = responsecoin.getEntity();
                 if (entity != null) {
                     // return it as a String
                     String result = EntityUtils.toString(entity);
@@ -66,7 +66,7 @@ public class HttpClient {
                 }
 
             } finally {
-                response.close();
+                responsecoin.close();
             }
         } finally {
             httpClient.close();
