@@ -16,4 +16,9 @@ public @interface CoinMarketServiceDesignate {
             description = "contains api key from the coinmarketcap")
     String apiKey() default "fb85e4f7-3aa0-46f7-b47e-50ee6103c3e0";
 
+    @AttributeDefinition(name = "Url path",
+            description = "Url path")
+    String urlQuotes() default "https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=BTC,ETH";
+
+
 }

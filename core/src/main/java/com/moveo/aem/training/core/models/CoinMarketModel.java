@@ -10,8 +10,6 @@ import org.slf4j.LoggerFactory;
 import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
 
 @Model(adaptables = Resource.class)
 public class CoinMarketModel {
@@ -20,23 +18,21 @@ public class CoinMarketModel {
     private CoinMarketService coinMarketService;
 
     private static final Logger LOG = LoggerFactory.getLogger(CoinMarketModel.class);
-    private List<CoinMarketBean> coinMarketList;
+    private CoinMarketBean coinMarketBean;
 
     @PostConstruct
     protected void init() {
         LOG.debug("Coin Market Model");
 
         try {
-            coinMarketList = coinMarketService.getCryptocurrencyPrices();
+            coinMarketBean = coinMarketService.getCryptocurrencyPrices();
         }
         catch(IOException | URISyntaxException exception){
             LOG.error("WeatherModel latitude/longitude non inseriti");
-            coinMarketList = new ArrayList<>();
         }
     }
 
-    public List<CoinMarketBean> getCoinMarketList() {
-        return
-                coinMarketList;
+    public CoinMarketBean getCoinMarketBean() {
+        return coinMarketBean;
     }
 }

@@ -23,8 +23,6 @@ import java.io.IOException;
         extensions="json")
 @ServiceDescription("Coin Market Servlet")
 public class CoinMarketServlet extends SlingSafeMethodsServlet {
-
-
     private static final long serialVersionUID = 1L;
 
     @Override

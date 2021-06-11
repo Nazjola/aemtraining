@@ -1,15 +1,18 @@
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
     <sly data-sly-call="${clientlib.all @ categories='aemtraining.coinmarket'}"/>
 </sly>
+
 <div class="coinmarket-container">
-   <script id="coinmarket-template" type="text/x-handlebars-template">
-        {{#each coinMarketList}
-        div class="element-style">
+<script id="coinmarket-template" type="text/x-handlebars-template">
+    <div class="element-style">
         <span class="name-coin">{{nameBtc}}</span>
         <span class="price-coin">{{priceBtc}}; </span> /
         <span class="dailystatus-percentage">{{dailystatusBtc}};</span>
         <span class="weeklystatus-percentage">{{weeklystatusBtc}};</span>
+        <span class="name-coin">{{nameEth}}</span>
+        <span class="price-coin">{{priceEth}}; </span> /
+        <span class="dailystatus-percentage">{{dailystatusEth}};</span>
+        <span class="weeklystatus-percentage">{{weeklystatusEth}};</span>
     </div>
-      {{/each}}
-    </script>
+</script>
 </div>
