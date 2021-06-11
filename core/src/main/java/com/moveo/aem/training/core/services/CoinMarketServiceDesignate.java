@@ -1,20 +1,19 @@
 package com.moveo.aem.training.core.services;
 
-
 import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
 
-@ObjectClassDefinition(name="AEMTraining Weather Forecast",
-        description = "Simple weather forecast")
-public @interface WeatherServiceDesignate{
+@ObjectClassDefinition(name="AEMTraining Coin Market",
+        description = "Coin Market")
+public @interface CoinMarketServiceDesignate {
 
     @AttributeDefinition(name = "Enabled",
             description = "Enabled")
     boolean enable() default true;
 
     @AttributeDefinition(name = "API Key",
-            description = "contains api key from the weather app")
-    String apiKey() default "6a64d0b020287b37ae6ec083064e5a86";
+            description = "contains api key from the coinmarketcap")
+    String apiKey() default "fb85e4f7-3aa0-46f7-b47e-50ee6103c3e0";
 
 }

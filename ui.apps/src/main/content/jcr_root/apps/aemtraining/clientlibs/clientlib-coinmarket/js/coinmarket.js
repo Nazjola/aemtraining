@@ -3,14 +3,10 @@ $( document ).ready(function() {
 
     $.ajax({
         type: "GET",
-             url : location.pathname,
-             url : url.substring(0, url.lastIndexOf(".")),
-             url : url + "/jcr:content/root/container/weather.json",
-/*        url: "/content/aemtraining/us/en/tirana/jcr:content/root/container/weather.json",*/
+             url "/content/aemtraining/us/en/coinmarket/jcr:content/root/container/coinmarket.json",
         dataType: "json",
         success: function (result, status, xhr) {
             // var table = $("<table><tr><th>Weather Description</th></tr>");
-            //
             // table.append("<tr><td>City:</td><td>" + result["name"] + "</td></tr>");
             // table.append("<tr><td>Country:</td><td>" + result["sys"]["country"] + "</td></tr>");
             // table.append("<tr><td>Current Temperature:</td><td>" + result["main"]["temp"] + "°C</td></tr>");
@@ -20,11 +16,10 @@ $( document ).ready(function() {
             // $("#weather-container").html(table);
             console.log(result);
             console.log(url);
-            var source = $("#weather-template").html();
+            var source = $("#coinmarket-template").html();
             var template = Handlebars.compile(source);
             var html = template(result);
-            // $("#movies").append(html); elemento con id
-            $(".weather-container").append(html); //elemento con class
+            $(".coinmarket-container").append(html);
         },
         error: function (xhr, status, error) {
             alert("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
