@@ -70,7 +70,11 @@ public class Btc implements Serializable
     private Quote quote;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+<<<<<<< HEAD
     private final static long serialVersionUID = -5039725669423529417L;
+=======
+    private final static long serialVersionUID = 3745990120481241969L;
+>>>>>>> aee500f36079cb89f1b54b02a77861f49894cac4
 
     @JsonProperty("id")
     public Integer getId() {

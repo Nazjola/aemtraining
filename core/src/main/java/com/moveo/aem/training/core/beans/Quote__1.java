@@ -24,7 +24,11 @@ public class Quote__1 implements Serializable
     private Usd__1 usd;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+<<<<<<< HEAD
     private final static long serialVersionUID = -1064994701816146182L;
+=======
+    private final static long serialVersionUID = 1774430573853231495L;
+>>>>>>> aee500f36079cb89f1b54b02a77861f49894cac4
 
     @JsonProperty("USD")
     public Usd__1 getUsd() {

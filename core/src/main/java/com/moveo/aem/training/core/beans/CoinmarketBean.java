@@ -14,43 +14,39 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "BTC",
-    "ETH"
+    "status",
+    "data"
 })
 @Generated("jsonschema2pojo")
-public class Data implements Serializable
+public class CoinmarketBean implements Serializable
 {
 
-    @JsonProperty("BTC")
-    private Btc btc;
-    @JsonProperty("ETH")
-    private Eth eth;
+    @JsonProperty("status")
+    private Status status;
+    @JsonProperty("data")
+    private Data data;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-<<<<<<< HEAD
-    private final static long serialVersionUID = 3747846169768450987L;
-=======
-    private final static long serialVersionUID = 6993405307007349571L;
->>>>>>> aee500f36079cb89f1b54b02a77861f49894cac4
+    private final static long serialVersionUID = 8419355944185273461L;
 
-    @JsonProperty("BTC")
-    public Btc getBtc() {
-        return btc;
+    @JsonProperty("status")
+    public Status getStatus() {
+        return status;
     }
 
-    @JsonProperty("BTC")
-    public void setBtc(Btc btc) {
-        this.btc = btc;
+    @JsonProperty("status")
+    public void setStatus(Status status) {
+        this.status = status;
     }
 
-    @JsonProperty("ETH")
-    public Eth getEth() {
-        return eth;
+    @JsonProperty("data")
+    public Data getData() {
+        return data;
     }
 
-    @JsonProperty("ETH")
-    public void setEth(Eth eth) {
-        this.eth = eth;
+    @JsonProperty("data")
+    public void setData(Data data) {
+        this.data = data;
     }
 
     @JsonAnyGetter

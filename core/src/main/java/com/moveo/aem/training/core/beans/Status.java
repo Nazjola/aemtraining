@@ -39,7 +39,11 @@ public class Status implements Serializable
     private Object notice;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+<<<<<<< HEAD
     private final static long serialVersionUID = 7024985341040341500L;
+=======
+    private final static long serialVersionUID = 4468307107327036113L;
+>>>>>>> aee500f36079cb89f1b54b02a77861f49894cac4
 
     @JsonProperty("timestamp")
     public String getTimestamp() {

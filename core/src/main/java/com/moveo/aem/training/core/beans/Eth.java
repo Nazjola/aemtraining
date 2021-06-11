@@ -70,7 +70,11 @@ public class Eth implements Serializable
     private Quote__1 quote;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+<<<<<<< HEAD
     private final static long serialVersionUID = -6750451915744766988L;
+=======
+    private final static long serialVersionUID = 1348315801420046628L;
+>>>>>>> aee500f36079cb89f1b54b02a77861f49894cac4
 
     @JsonProperty("id")
     public Integer getId() {
