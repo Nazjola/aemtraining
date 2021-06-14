@@ -28,7 +28,7 @@ public class CoinMarketModel {
             coinMarketBean = coinMarketService.getCryptocurrencyPrices();
         }
         catch(IOException | URISyntaxException exception){
-            LOG.error("WeatherModel latitude/longitude non inseriti");
+            LOG.error("Coin market page not reached");
         }
     }
 

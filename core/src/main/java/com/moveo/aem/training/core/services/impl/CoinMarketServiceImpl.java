@@ -11,6 +11,7 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.metatype.annotations.Designate;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.HashMap;
 
 @Designate(ocd= CoinMarketServiceDesignate.class)
@@ -31,16 +32,25 @@ public CoinMarketBean getCryptocurrencyPrices() throws IOException {
        ObjectMapper objectMapper = new ObjectMapper();
        CoinMarketResult coinResult = objectMapper.readValue(result, CoinMarketResult.class);
 
+
+    DecimalFormat numberFormat = new DecimalFormat("#.00");
+    String pricebtc = numberFormat.format(coinResult.getData().getBtc().getQuote().getUsd().getPrice());
+    String priceeth = numberFormat.format(coinResult.getData().getEth().getQuote().getUsd().getPrice());
+    String btc24 = numberFormat.format(coinResult.getData().getBtc().getQuote().getUsd().getPercentChange24h());
+    String eth24 = numberFormat.format(coinResult.getData().getEth().getQuote().getUsd().getPercentChange24h());
+    String btc7 = numberFormat.format(coinResult.getData().getBtc().getQuote().getUsd().getPercentChange7d());
+    String eth7 = numberFormat.format(coinResult.getData().getEth().getQuote().getUsd().getPercentChange7d());
        //todo control if result bean has values,works correctly
                CoinMarketBean coinMarketBean = new CoinMarketBean();
                coinMarketBean.setNameEth(coinResult.getData().getEth().getSymbol());
                coinMarketBean.setNameBtc(coinResult.getData().getBtc().getSymbol());
-               coinMarketBean.setPriceEth(coinResult.getData().getEth().getQuote().getUsd().getPrice().toString());
-               coinMarketBean.setPriceBtc(coinResult.getData().getBtc().getQuote().getUsd().getPrice().toString());
-               coinMarketBean.setDailystatusEth(coinResult.getData().getEth().getQuote().getUsd().getPercentChange24h().toString());
-               coinMarketBean.setDailystatusBtc(coinResult.getData().getBtc().getQuote().getUsd().getPercentChange24h().toString());
-               coinMarketBean.setWeeklystatusEth(coinResult.getData().getEth().getQuote().getUsd().getPercentChange7d().toString());
-               coinMarketBean.setWeeklystatusBtc(coinResult.getData().getBtc().getQuote().getUsd().getPercentChange7d().toString());
+               coinMarketBean.setPriceEth(priceeth);
+               coinMarketBean.setPriceBtc(pricebtc);
+               coinMarketBean.setDailystatusEth(eth24);
+               coinMarketBean.setDailystatusBtc(btc24);
+               coinMarketBean.setWeeklystatusEth(eth7);
+               coinMarketBean.setWeeklystatusBtc(btc7);
+
         return coinMarketBean;
 }
 
